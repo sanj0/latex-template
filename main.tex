@@ -1,0 +1,127 @@
+\documentclass[11pt,a4paper,twoside]{scrreprt}
+
+\title{Hier steht sicherlich der Titel}
+\author{***REMOVED*** ***REMOVED*** (3763473)}
+\date{2025}
+
+% Encoding
+\usepackage[utf8]{inputenc}
+\usepackage[autostyle]{csquotes}
+
+% Schriftart
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% Sprache
+\usepackage[ngerman]{babel}
+
+% Kleine Ränder
+\usepackage[a4paper,tmargin=25mm,bmargin=25mm,lmargin=20mm,rmargin=20mm]{geometry}
+
+% Mathematik!
+%\usepackage{latexsym,amsmath,amssymb,mathtools,textcomp}
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,fit}
+%\usepackage{pgfplots}
+
+\usepackage{microtype}
+
+% Sätze und Theoreme
+%\usepackage{amsthm}
+
+% Deutsches Literaturverzeichnis
+\usepackage{bibgerm}
+
+% Unterstützung zum Einbinden von Graphiken
+%\usepackage{graphicx}
+
+% Pakete die tabular und array verbessern
+\usepackage{array,multirow}
+
+% Kleiner enumerate und itemize Umgebungen
+\usepackage{enumitem}
+\setlist{nosep,topsep=0.5em}
+
+% Zeilenabstände
+\usepackage{setspace}
+\onehalfspacing
+
+%\setlist[enumerate]{topsep=0pt}
+%\setlist[itemize]{topsep=0pt}
+%\setlist[description]{font=\normalfont,topsep=0pt}
+
+%\setlist[enumerate,1]{label=(\roman*)}
+
+% Nummeriere auch subsections
+\setcounter{secnumdepth}{3}
+% ... und nimm sie ins Inhaltsverzeichnis auf
+\setcounter{tocdepth}{3}
+
+% Literatur
+\usepackage[
+    backend=biber,
+    style=authoryear-comp,
+    sortlocale=de_DE,
+    natbib=true,
+    url=true, 
+    doi=true,
+    eprint=true
+]{biblatex}
+\DefineBibliographyStrings{ngerman}{
+   andothers = {{et~al\adddot}},
+}
+\addbibresource{literatur.bib}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false,
+}
+
+%\newtheoremstyle{break} % https://tex.stackexchange.com/a/37805
+%  {}%         Space above, empty = `usual value'
+%  {}%         Space below
+%  {\upshape}% Body font
+%  {}%         Indent amount (empty = no indent, \parindent = para indent)
+%  {\bfseries}% Thm head font
+%  {.}%        Punctuation after thm head
+%  {\newline}% Space after thm head: \newline = linebreak
+%  {\thmname{#1}\thmnumber{ #2}\thmnote{ \normalfont\itshape#3}}%         Thm head spec
+%\theoremstyle{break}
+%% Umgebungen
+%\newtheorem{definition}{Definition}[chapter]
+%\newtheorem{example}[definition]{Beispiel}
+%\newtheorem{corollary}[definition]{Korollar}
+%\newtheorem{theorem}[definition]{Theorem}
+%\newtheorem{lemma}[definition]{Lemma}
+
+%\newcommand{\defeq}{\vcentcolon=}
+
+%% ##############################
+\begin{document}
+
+\pagenumbering{roman}
+\maketitle
+\cleardoublepage
+
+\newgeometry{tmargin=25mm,bmargin=25mm,lmargin=35mm,rmargin=30mm}
+
+\tableofcontents
+\listoffigures
+\cleardoublepage
+\pagenumbering{arabic}
+
+\chapter*{Selbstständigkeitserklärung}
+\addcontentsline{toc}{chapter}{Selbstständigkeitserklärung}
+Hiermit erkläre ich, dass ich die vorliegende Arbeit selbständig verfasst und
+keine anderen als die angegebenen Hilfsmittel benutzt habe. Die Stellen der
+Arbeit, die anderen Quellen im Wortlaut oder dem Sinn nach entnommen
+wurden, sind durch Angaben der Herkunft kenntlich gemacht.
+Ich versichere außerdem, dass die vorliegende Arbeit noch keinem anderen Prüfungsverfahren
+zugrunde gelegen hat bzw. keiner weiteren Stelle zur Prüfung vorgelegt wurde
+und dass die elektronische mit der ausgedruckten Abgabe identisch ist.
+\par
+\vspace{1.5cm}
+***REMOVED*** ***REMOVED***, Leipzig am \today
+
+\printbibliography[heading=bibintoc]
+\end{document}
